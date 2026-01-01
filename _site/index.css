@@ -1,8 +1,26 @@
 body {
     background-color: #080708;
-    margin: 0;
     width: 100%;
 }
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+main {
+    padding: 20px;
+    flex-grow: 1
+}
+
 
 h1 {
     font-family: "Space Grotesk", sans-serif;
@@ -151,33 +169,53 @@ iframe {
     background-color: #585858;
 }
 
+@media screen and (max-width: 600px) {
+    .infoShelf {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .infoShelf {
+        display: flex;
+    }
+
+    .infoBox {
+        flex: 1;
+    }
+}
+
 .infoShelf {
     padding-top: 20px;
     width: 100%;
-    display: flex;
 }
 
 .infoBox {
     color: #080708;
-    height: 300px;
+    height: fit-content;
     background-color: #145C9E;
     margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
     padding-left: 5px;
     padding-right: 5px;
-    flex: 1;
     border-radius: 7px;
 }
 
 .title {
     font-family: "Space Grotesk", sans-serif;
     font-size: 30px;
+    margin: 10px;
 }
+
 
 .description {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
 }
 
 footer {
@@ -186,9 +224,12 @@ footer {
     text-align: center;
     width: 100%;
     margin-top: 30px;
-    margin-bottom: 10px;
     color: #FFFAFF;
     padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    bottom: 0px;
+    background-color: #1b1b1b;
 }
 
 footer a:link {
@@ -201,6 +242,14 @@ footer a:visited {
     color: #FFFAFF;
     background-color: transparent;
     text-decoration: underline;
+}
+
+.socials {
+    height: 20px;
+    margin-bottom: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+
 }
 
 /* Color palate 
